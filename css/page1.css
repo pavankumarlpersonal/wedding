@@ -1,0 +1,73 @@
+.tabassum , .nadim , .weds , .scroll {
+  position : absolute;
+
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+
+  margin:auto;
+  display:none;
+
+  height : 40px;
+  width : 15%;
+  text-align:center;
+}
+
+.weds {
+  width: 5%;
+  z-index:1;
+}
+
+.scroll {
+    width: 20%;
+    color : #F27935;
+    font-weight:bold;
+    font-size : 125%;
+}
+
+.bride-n-groom {
+  position : absolute;
+
+  top:0;
+  bottom:0;
+  left:0%;
+  right: 0;
+
+  margin:auto;
+  display:none;
+
+  height: 70%;
+
+}
+
+.tabassum-ribbon {
+  background:#F22613;
+  border:1px solid #F22613;
+  color:white;
+  line-height:40px;
+  border-radius:1px;
+  font-weight:bold;
+  font-style:italic;
+}
+
+.nadim-ribbon {
+  background: #F39C12;
+  border:1px solid #F39C12;
+  color:white;
+  line-height:40px;
+  border-radius:1px;
+  font-weight:bold;
+  font-style:italic;
+}
+
+.weds-ribbon {
+  background : #96281B;
+  border: 1px solid #96281B;
+
+  color:white;
+  line-height:40px;
+  border-radius:50%;
+  font-weight:bold;
+  font-style:italic;
+}

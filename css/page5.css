@@ -1,0 +1,33 @@
+.nadim-image, .nadim-intro , .nadim-name {
+  position : absolute;
+
+  top:0;
+  bottom : 0;
+  left :0;
+  right: 0;
+
+  margin: auto;
+
+  height: 30px;
+
+  display:none;
+
+  font-size:200%;
+  color:white;
+  text-align : center;
+}
+
+.nadim-image {
+  height : 70%;
+}
+
+.nadim-intro {
+  font-family: 'Dancing Script', cursive;
+  color : #EFF7A4;
+  font-size : 300%;
+}
+
+.nadim-name {
+  font-family: 'Indie Flower', cursive;
+  color : #F9BF3B;
+}

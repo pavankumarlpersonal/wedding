@@ -1,0 +1,41 @@
+.wedding-on , .doli , .bride , .groom , .wedding-at{
+  position : absolute;
+
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+
+  margin:auto;
+  display:none;
+
+  height : 40px;
+  width : 25%;
+  text-align:center;
+}
+
+.wedding-on {
+  color:white;
+  width : 30%;
+}
+
+.doli  {
+  width : auto;
+  height : auto;
+}
+
+.bride , .groom {
+  height : 70%;
+}
+
+.date {
+  font-size : 160%;
+  color : #F89406;
+}
+
+.wedding-at {
+  width : 30%;
+  height : 30%;
+
+  border-radius : 10px;
+}
