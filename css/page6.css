@@ -1,0 +1,33 @@
+.tabassum-image, .tabassum-intro , .tabassum-name {
+  position : absolute;
+
+  top:0;
+  bottom : 0;
+  left :0;
+  right: 0;
+
+  margin: auto;
+
+  height: 30px;
+
+  display:none;
+
+  font-size:200%;
+  color:white;
+  text-align : center;
+}
+
+.tabassum-image {
+  height : 70%;
+}
+
+.tabassum-intro {
+  font-family: 'Dancing Script', cursive;
+  color : #EFF7A4;
+  font-size : 300%;
+}
+
+.tabassum-name {
+  font-family: 'Indie Flower', cursive;
+  color : #F9BF3B;
+}
