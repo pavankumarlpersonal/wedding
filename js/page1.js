@@ -7,12 +7,17 @@
   var weds = page.elem.find('[data-identifier=weds]');
   var brideNGroom = page.elem.find('[data-identifier=brider-n-groom]');
   var scroll = page.elem.find('[data-identifier=scroll]');
+  var quote = page.elem.find('[data-identifier=quote]');
 
   tabassum.css('top' , '-200%').show();
   nadim.css('top' , '200%').show();
   weds.css('left' , '200%').show()
   brideNGroom.css('left' , '-200%').show();
   scroll.css('bottom' , '-200%').show();
+  quote.css({
+    'right' : '-200%',
+    'top' : '-50%'
+  }).show();
 
   tabassum.animate({
     top : '-7.5%',
@@ -109,6 +114,10 @@
     scroll.animate({
       bottom : '-80%'
     } , 'fast');
+
+    quote.animate({
+        right : '-70%'
+    } , 'slow');
 
     setTimeout(function(){
       scroll.css({
@@ -264,6 +273,10 @@
       brideNGroom.animate({
         'left' : '-200%',
       } , 'slow');
+
+      quote.animate({
+        right : '-200%'
+      } , 'slow');
     }
   });
 
@@ -290,10 +303,6 @@
     }
   });
 
-  page.on('5' , function(direction){
-    if(direction == "left"){
 
-    }
-  });
 
 })($ , Page);

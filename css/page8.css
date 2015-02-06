@@ -1,4 +1,4 @@
-.engagement-name , .image {
+.engagement-name  {
   position : absolute;
 
   top:0;
@@ -20,6 +20,11 @@
   color : #F9BF3B;
 }
 
-.image {
-  height : 30%;
+.engagement {
+  width : 300px;
+  height : 300px;
+}
+
+.engagement > img {
+  width : 300px;
 }

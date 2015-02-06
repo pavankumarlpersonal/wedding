@@ -16,7 +16,7 @@
 
     image1.css({
         'right': '-200%'
-    }).hide();
+    }).show();
 
     image2.css({
         'right': '-200%'
@@ -58,22 +58,22 @@
 
     var showImages = function() {
         image1.animate({
-            'left': '-20%',
+            'left': '-60%',
             'right': '0'
         }, '300');
 
         image2.animate({
-            'left': '-33.33%',
+            'left': '-20%',
             'right': '0%'
         }, '600');
 
         image3.animate({
-            'right': '-0%',
+            'right': '-20%',
             'left': '0%'
         }, '900');
 
         image4.animate({
-            'right': '-33.33%',
+            'right': '-60%',
             'left': '0%'
         }, '1200');
     }
