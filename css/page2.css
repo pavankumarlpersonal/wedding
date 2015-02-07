@@ -1,4 +1,4 @@
-.wedding-on , .doli , .bride , .groom , .wedding-at{
+.wedding-on , .doli , .bride , .groom , .wedding-at ,.the-wedding , .flower, .venue{
   position : absolute;
 
   top:0;
@@ -14,9 +14,21 @@
   text-align:center;
 }
 
+.flower {
+  height : auto;
+}
+
 .wedding-on {
   color:white;
-  width : 30%;
+  width : 10%;
+
+  font-family: 'Indie Flower', cursive;
+}
+
+.the-wedding {
+  color : rgb(250, 240, 136);
+  font-size : 300%;
+  font-family: 'Frijole', cursive;
 }
 
 .doli  {
@@ -28,14 +40,34 @@
   height : 70%;
 }
 
-.date {
+.date , .venue {
   font-size : 160%;
   color : #F89406;
 }
 
-.wedding-at {
-  width : 30%;
-  height : 30%;
+.time {
+  font-size : 100%;
+  color : orangered;
 
-  border-radius : 10px;
+}
+
+.venue {
+  width : 15%;
+  font-family: 'Chewy', cursive;
+}
+
+.wedding-at {
+  width : 300px !important;
+  height : 300px !important;
+
+  border-radius : 100%;
+}
+
+.wedding-at > img {
+  width : 400px !important;
+  position : relative;
+  left : -20px;
+
+  cursor:hand;
+  cursor:pointer;
 }

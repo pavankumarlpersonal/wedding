@@ -82,6 +82,7 @@
 
         if(times == 8){
             wedding();
+            $(document).trigger('enable');
         }else{
           shiverInterval(interval/2);
           times = times + 1;

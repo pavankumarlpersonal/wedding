@@ -8,12 +8,21 @@
   var groom = page.elem.find('[data-identifier=groom]');
   var map = page.elem.find('[data-identifier=wedding-at]');
 
+  var theWedding = page.elem.find('[data-identifier=the-wedding]');
+  var flower = page.elem.find('[data-identifier=flower]');
+  var venue = page.elem.find('[data-identifier=venue]');
+
   weddingOn.css({
     'opacity' : 0,
     'width' : '0%',
     'height' : '0%',
-    'top' : '-25%'
+    'left' : '-75%'
   }).show();
+
+  map.find('img').on('click' , function(){
+    window.open('https://www.google.co.in/maps/place/Vokkaligara+Samudaya+Bhavana/@13.9441538,75.5816373,15z/data=!4m2!3m1!1s0x3bbba9290da55897:0x562ddfc8c04869d1' , '_blank');
+  });
+
   doli.css({
     'opacity' : 0,
     'top' : '-70%',
@@ -33,6 +42,23 @@
     'left' : '-200%'
   }).show();
 
+  theWedding.css({
+      'opacity' : '0',
+      'left' : '-200%',
+      'top' : '-80%'
+  }).show();
+
+  flower.css({
+    'left' : '-200%',
+    'top' : '-70%'
+  }).show();
+
+  venue.css({
+    'opacity' : '0',
+    'right' : '-70%',
+    'width' : '0',
+    'height' : '0'
+  }).show();
 
   page.on('120' , function(direction){
       if(direction == "left"){
@@ -53,7 +79,7 @@
   var showWedding = function(){
     weddingOn.animate({
       'opacity' : 1,
-      'width' : '30%',
+      'width' : '10%',
       'height' : '40px',
     });
 
@@ -78,6 +104,23 @@
         'right' : '0',
         'left' : '0'
     });
+
+    theWedding.animate({
+        'opacity' : '1',
+        'left' : '0',
+        'right' : '-60%'
+    });
+
+    flower.animate({
+        'left' : '-70%',
+        'right' : '0%'
+    });
+
+    venue.animate({
+      'opacity' : '1',
+      'width' : '15%',
+      'height' : 'auto'
+    });
   };
 
   var hideWedding = function(direction){
@@ -86,6 +129,13 @@
       'width' : '0%',
       'height' : '0%',
     });
+
+    venue.animate({
+      'opacity' : '0',
+      'width' : '0%',
+      'height' : '0%'
+    });
+
 
     var doliAnim = {};
     doliAnim.opacity = '0';
@@ -97,6 +147,12 @@
     var mapAnim = {};
     mapAnim.opacity = '0';
 
+    var flowerAnim = {};
+
+    var theWeddingAnim = {};
+    theWeddingAnim.opacity = '0';
+
+
     if(direction == "right"){
       doliAnim.left = '-200%';
 
@@ -106,6 +162,12 @@
 
       mapAnim.left = '-200%';
 
+      flowerAnim.right = '-200%';
+      flowerAnim.left = '0%';
+
+      theWeddingAnim.right = '-200%';
+      theWeddingAnim.left = '0%';
+
     }else{
       doliAnim.right = '-200%';
 
@@ -114,7 +176,15 @@
       groomAnim.bottom = '-200%';
 
       mapAnim.right = '-200%';
+
+      flowerAnim.left = '-200%';
+      flowerAnim.right = '0';
+
+      theWeddingAnim.left = '-200%';
+      theWeddingAnim.right = '0';
     }
+
+
 
     doli.animate(doliAnim);
 
@@ -123,206 +193,9 @@
     groom.animate(groomAnim);
 
     map.animate(mapAnim);
+
+    theWedding.animate(theWeddingAnim);
+    flower.animate(flowerAnim);
   };
-
-  /*var weddingOnShow = {
-    scrollFrom : 5,
-    scrollTo : 26,
-    selector : weddingOn,
-    unit : '%',
-
-    variables : {
-      opacity : {
-        step : 0.05,
-        initial : 0,
-        unit : ' ',
-      },
-      fontSize : {
-        step : 10,
-        initial : 0,
-      },
-    }
-  };
-
-  var doliShow = {
-    scrollFrom : 5,
-    scrollTo : 26,
-    selector : doli,
-    unit : '%',
-
-    variables : {
-      opacity : {
-        step : 0.05,
-        initial : 0,
-        unit : ' ',
-      },
-
-      top : {
-        step : 5,
-        initial : -160
-      }
-    }
-  };
-
-  var brideShow = {
-    scrollFrom : 5,
-    scrollTo : 26,
-    selector : bride,
-    unit : '%',
-
-    variables : {
-      opacity : {
-        step : 0.05,
-        initial : 0,
-        unit : ' ',
-      },
-
-      left : {
-        step : 5,
-        initial : -170
-      }
-    }
-  };
-
-  var groomShow = {
-    scrollFrom : 5,
-    scrollTo : 26,
-    selector : groom,
-    unit : '%',
-
-    variables : {
-      opacity : {
-        step : 0.05,
-        initial : 0,
-        unit : ' ',
-      },
-
-      right : {
-        step : 5,
-        initial : -170
-      }
-    }
-  };
-
-  var mapShow = {
-    scrollFrom : 35,
-    scrollTo : 56,
-    selector : map,
-    unit : '%',
-
-    variables : {
-      opacity : {
-        step : 0.05,
-        initial : 0,
-        unit : ' ',
-      },
-    }
-  };
-
-  var weddingOnHide = {
-    scrollFrom : 35,
-    scrollTo : 56,
-    selector : weddingOn,
-    unit : '%',
-
-    variables : {
-      opacity : {
-        step : -0.05,
-        initial : 1,
-        unit : ' ',
-      },
-      fontSize : {
-        step : -10,
-        initial : 100,
-      },
-    }
-  };
-
-  page.on('35' , function(direction){
-
-      if(direction == 'left'){
-        map.hide();
-      }else{
-        map.show();
-      }
-  });
-
-  page.animate(weddingOnShow);
-  page.animate(doliShow);
-  page.animate(brideShow);
-  page.animate(groomShow);
-  page.animate(mapShow);
-  page.animate(weddingOnHide);
-  */
 
 })($ , Page);
-
-/*var page1 = new Page('[data-page=2]');
-
-//var onceUponATime = page1.elem.find('[data-identifier=once-upon-a-time]');
-//var someMessage = page1.elem.find('[data-identifier=some-message]').css("opacity" , "0");
-
-
-
-var onceUponATime = {
-  scrollFrom : 0,
-  scrollTo : 20,
-  selector : '[data-identifier=once-upon-a-time]',
-  unit : '%',
-
-  variables : {
-    top : {
-      step : -3,
-      initial : 0
-    },
-    left : {
-      step : -3,
-      initial : 0,
-    },
-    fontSize : {
-      step : -2.5,
-      initial : 200
-    }
-  }
-};
-
-var someMessage = {
-  scrollFrom : 5,
-  scrollTo : 25,
-  unit : '%',
-
-  selector : '[data-identifier=some-message]',
-
-  variables : {
-    opacity : {
-      step : 0.05,
-      initial : 0,
-      unit : ' '
-    },
-    width : {
-      step : 2.5,
-      initial : 20
-    }
-  }
-};
-
-page1.animate(onceUponATime);
-page1.animate(someMessage);
-
-var onceUponATimeSlideLeft = {
-  scrollFrom : 25,
-  scrollTo : 45,
-  selector : '[data-identifier=once-upon-a-time]',
-  unit : '%',
-
-  variables : {
-
-    left : {
-      step : -5,
-      initial : -60,
-    },
-
-  }
-};
-
-page1.animate(onceUponATimeSlideLeft);*/

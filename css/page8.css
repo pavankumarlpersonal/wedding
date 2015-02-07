@@ -1,4 +1,4 @@
-.engagement-name  {
+.engagement-name , .thank-you  {
   position : absolute;
 
   top:0;
@@ -18,6 +18,10 @@
 
   font-family: 'Indie Flower', cursive;
   color : #F9BF3B;
+}
+
+.thank-you{
+  font-weight : bold;
 }
 
 .engagement {
