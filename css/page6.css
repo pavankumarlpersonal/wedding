@@ -1,5 +1,5 @@
 .tabassum-image, .tabassum-intro , .tabassum-name {
-  position : absolute;
+  position : fixed;
 
   top:0;
   bottom : 0;
