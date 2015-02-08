@@ -9,9 +9,23 @@
     var img = images.get(i);
 
     img.onload = function(){
-      loadCallback();
+      if(img.complete)
+        loadCallback();
+      else{
+        imageCompleteCallback(img);
+      }
     }
   }
+
+  var imageCompleteCallback = function(image){
+    setTimeout(function(){
+        if(image.complete){
+          loadCallback();
+        }else{
+          imageCompleteCallback(image);
+        }
+    },1000);
+  };
 
   //pace.start();
   var loadCallback = function(){
