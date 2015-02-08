@@ -19,14 +19,6 @@
     'top' : '-50%'
   }).show();
 
-  tabassum.animate({
-    top : '-7.5%',
-  },
-  500);
-
-  nadim.animate({
-    top : '7.5%'
-  } , 500);
 
   var shiverRight = function(){
     tabassum.css({
@@ -56,9 +48,23 @@
     });
   };
 
-  setTimeout(function(){
+
+  $(document).on('start' , function(){
+    tabassum.animate({
+      top : '-7.5%',
+    },
+    500);
+
+    nadim.animate({
+      top : '7.5%'
+    } , 500);
+
+    setTimeout(function(){
       shiverInterval(100);
-  },1000);
+    },1000);
+    
+
+  });
 
   var shiverIntervalId;
   var times = 0;

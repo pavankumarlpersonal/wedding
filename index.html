@@ -2,15 +2,23 @@
 <html>
 
 <head>
+
+  <script src="pace.min.js"></script>
+  <link rel="stylesheet" href="pace.css" />
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  <!--<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Frijole' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Frijole' rel='stylesheet' type='text/css'>-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
   <link rel="stylesheet" href="marriage.css" />
+
+
   <script src="marriage.js"></script>
+  <script src="useragent.js"></script>
 
   <link rel="stylesheet" href="css/page1.css" />
   <link rel="stylesheet" href="css/page2.css" />
@@ -21,10 +29,22 @@
   <link rel="stylesheet" href="css/page8.css" />
   <link rel="stylesheet" href="css/page9.css" />
   <link rel="stylesheet" href="heart.css" />
+  <link rel="stylesheet" href="loading.css" />
+
+
 
 </head>
 
 <body>
+
+  <div class="pace pace-active">
+    <div class="pace-progress" data-progress-text="0%" data-progress="00" style="-webkit-transform: translate3d(0%, 0px, 0px); transform: translate3d(0%, 0px, 0px);">
+      <div class="pace-progress-inner"></div>
+    </div>
+    <div class="pace-activity"></div>
+  </div>
+
+
 
   <div class="page" data-page="1">
     <div data-identifier="tabassum" class="tabassum tabassum-ribbon">Tabassum</div>
@@ -35,7 +55,7 @@
     <div data-identifier="quote" class="quote">Walking with your hands in mine and mine in yours, that's exactly where I want to be always</div>
   </div>
 
-  <div class="page" data-page="2" >
+  <div class="page" data-page="2">
     <div data-identifier="the-wedding" class="the-wedding">The wedding</div>
     <img data-identifier="flower" class="flower" src="images/flower.png" />
     <!-- <img data-identifier="doli" class="doli" src="images/doli.png" />
@@ -47,15 +67,13 @@
       <span class="time"> 8 30 AM</span>
     </div>
     <div data-identifier="wedding-at" class="image wedding-at">
-      <img  src="images/venue.png" />
+      <img src="images/venue.png" />
     </div>
 
     <div data-identifier="venue" class="venue">
       Vokkaligara Samudaya Bhavana,
-      <br>
-      Tank Mohalla,
-      <br>
-      Shivamogga, Karnataka 577201
+      <br> Tank Mohalla,
+      <br> Shivamogga, Karnataka 577201
     </div>
 
   </div>
@@ -71,13 +89,13 @@
   </div>
 
   <div class="page" data-page="nadim">
-    <div data-identifier="nadim-name" class="nadim-name">Musaveer Nadim Khan</div>
+    <div data-identifier="nadim-name" class="nadim-name">Musaveer Nadeem Khan</div>
     <img data-identifier="nadim-image" class="nadim-image" src="images/groom.png" />
     <div data-identifier="nadim-intro" class="nadim-intro">Tall , handsome, Loves driving...</div>
   </div>
 
   <div class="page" data-page="tabassum">
-    <div data-identifier="tabassum-name" class="tabassum-name">Tabassum Khanum</div>
+    <div data-identifier="tabassum-name" class="tabassum-name">Tabassum</div>
     <img data-identifier="tabassum-image" class="tabassum-image" src="images/bride.png" />
     <div data-identifier="tabassum-intro" class="tabassum-intro">Pretty and talkative...</div>
   </div>
@@ -85,35 +103,37 @@
   <div class="page" data-page="journey">
     <div data-identifier="journey-name" class="journey-name">After 7 years of love...</div>
     <div data-identifier="img-1" class="image">
-      <img  src="images/journey1.jpg"/>
+      <img src="images/journey1.jpg" />
     </div>
     <div data-identifier="img-2" class="image">
-      <img  src="images/journey2.jpg"/>
+      <img src="images/journey2.jpg" />
     </div>
     <div data-identifier="img-3" class="image">
-      <img  src="images/journey3.jpg"/>
+      <img src="images/journey3.jpg" />
     </div>
     <div data-identifier="img-4" class="image">
-      <img  src="images/journey4.jpg"/>
+      <img src="images/journey4.jpg" />
     </div>
   </div>
 
   <div class="page" data-page="engagement">
     <div data-identifier="engagement-name" class="engagement-name">Engaged On 23rd Feb Last year</div>
     <div data-identifier="engagement-image2" class="engagement image">
-      <img  src="images/engagement1.jpg"/>
+      <img src="images/engagement1.jpg" />
     </div>
     <div data-identifier="engagement-image1" class="engagement image">
-      <img  src="images/engagement2.jpg"/>
+      <img src="images/engagement2.jpg" />
     </div>
 
   </div>
 
   <div class="page" data-page="thank">
-      <div data-identifier="thank-you" class="thank-you">Thank You</div>
+    <div data-identifier="thank-you" class="thank-you">Thank You</div>
   </div>
 
   <div class="heart" style="display:none"></div>
+
+  <script src="loading.js"></script>
 
   <script src="js/page1.js"></script>
   <script src="js/page2.js"></script>
@@ -125,6 +145,7 @@
   <script src="js/page8.js"></script>
   <script src="js/page9.js"></script>
   <script src="heart.js"></script>
+
 
 </body>
 
