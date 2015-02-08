@@ -14,14 +14,13 @@
   }
 
   //pace.start();
-  $('.heart').hide();
   var loadCallback = function(){
     loaded = loaded + 1;
     console.log('callbacks');
     if(loaded === images.length){
 
       $('.pace').hide();
-      $('.heart').show();
+      $('.dynamic-heart').show();
       //pace.stop();
       //$('.loading').hide();
       $(document).trigger('start');

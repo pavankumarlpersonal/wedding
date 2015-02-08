@@ -34,5 +34,5 @@ for(var i=0; i<positions.length; i++){
   var size = sizes[getRandom()];
   var color = colors[getRandom()];
 
-  clone.addClass(size).addClass(size + " " + color).css(positions[i]).appendTo('body').show();
+  clone.addClass(size).addClass(size + " " + color + " dynamic-heart").css(positions[i]).appendTo('body');
 }
